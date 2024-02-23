@@ -9,20 +9,20 @@ const BlownUp = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) =>
 
   return (
     <div className="w-full h-auto bg-neutral-800 p-[10%]">
-      <div className="grid grid-cols-2 gap-5 mb-10">
+      <div className="grid grid-cols-2 gap-5 mb-10 max-sm:grid-cols-1 max-sm:my-20 max-sm:gap-10">
         <CardOne
           title={'Blown Up'}
           client={'Benjamin Garcia'}
           year={2025}
         >
           {
-            blownUpData.filter(item => item.category === "bOne").map(({id, img}) => {
+            blownUpData.filter(item => item.category === "bOne").map(({ id, img }) => {
               return (
                 <img
                   key={id}
                   src={img}
                   alt="image"
-                  className="w-full h-auto object-fill cursor-pointer hover:opacity-80 duration-300"
+                  className="w-full h-auto object-cover cursor-pointer hover:opacity-80 duration-300 max-sm:w-full max-sm:h-60"
                   onClick={() => handleClick(id)}
                 />
               )
@@ -31,13 +31,13 @@ const BlownUp = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) =>
         </CardOne>
         <CardTwo>
           {
-            blownUpData.filter(item => item.category === "bTwo").map(({id, img}) => {
+            blownUpData.filter(item => item.category === "bTwo").map(({ id, img }) => {
               return (
                 <img
                   key={id}
                   src={img}
                   alt="image"
-                  className="w-full h-auto object-fill cursor-pointer hover:opacity-80 duration-300"
+                  className="w-full h-auto object-cover cursor-pointer hover:opacity-80 duration-300 max-sm:w-full max-sm:h-60"
                   onClick={() => handleClick(id)}
                 />
               )
@@ -54,14 +54,12 @@ const BlownUp = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) =>
         </Link>
       </div>
       {
-        showSwiper ? (
+        showSwiper && (
           <CardSwiper
             data={blownUpData}
             setShowSwiper={setShowSwiper}
             selectedImageID={selectedImageID}
           />
-        ) : (
-          ''
         )
       }
     </div>

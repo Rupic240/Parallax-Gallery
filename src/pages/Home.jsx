@@ -36,7 +36,7 @@ const Home = () => {
                 >
                     <source src={BgVideo} type="video/mp4" />
                 </video>
-                <h1 className="text-[10em] font-bold text-white mt-10 z-10">Catapult</h1>
+                <h1 className="text-[10em] font-bold text-white mt-10 z-10 max-sm:text-7xl">Catapult</h1>
                 <h2 className="text-xl font-semibold text-white mb-5 z-10">Featured Projects</h2>
                 <HiArrowLongDown className="text-white text-4xl z-10 animate-bouncing" />
             </div>

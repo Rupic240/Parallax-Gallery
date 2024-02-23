@@ -8,7 +8,7 @@ import CardSwiper from "../cards/CardSwiper";
 const Figura = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
   return (
     <div className="w-full h-auto bg-neutral-800 p-[10%]">
-      <div className="grid grid-cols-2 gap-5 mb-10">
+      <div className="grid grid-cols-2 gap-5 mb-10 max-sm:grid-cols-1 max-sm:my-20 max-sm:gap-10">
         <CardOne
           title={'Figura'}
           client={'Lucas Thompson'}
@@ -23,7 +23,7 @@ const Figura = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
                       <img
                         src={img}
                         alt="image"
-                        className="w-full h-auto object-fill cursor-pointer hover:opacity-80 duration-300"
+                        className="w-full h-auto object-cover cursor-pointer hover:opacity-80 duration-300 max-sm:w-full max-sm:h-60"
                         onClick={() => handleClick(id)}
                       />
                     )
@@ -34,7 +34,7 @@ const Figura = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
                         // autoPlay
                         muted
                         loop
-                        className="w-full h-auto object-cover"
+                        className="w-full h-auto object-cover max-sm:w-full max-sm:h-60"
                         onClick={() => handleClick(id)}
                       >
                         <source src={vd} type="video/mp4" />
@@ -54,7 +54,7 @@ const Figura = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
                   key={id}
                   src={img}
                   alt="image"
-                  className="w-full h-auto object-fill cursor-pointer hover:opacity-80 duration-300"
+                  className="w-full h-auto object-cover cursor-pointer hover:opacity-80 duration-300  max-sm:w-full max-sm:h-60"
                   onClick={() => handleClick(id)}
                 />
               )

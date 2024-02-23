@@ -3,7 +3,7 @@ import { privacyPolicy } from "../data";
 const Privacy = () => {
   return (
     <div className="w-full h-auto bg-neutral-800 p-[10%] grid place-content-center gap-10">
-      <h1 className="text-7xl font-bold text-white max-lg:mt-10">Privacy Policy</h1>
+      <h1 className="text-7xl font-bold text-white max-lg:mt-16">Privacy Policy</h1>
       {
         privacyPolicy.map(({ title, disc }, index) => {
           return (
