@@ -46,7 +46,7 @@ const Header = () => {
                 setIsNavShowing(prev => !prev);
               }}
             />
-            <div className="fixed top-0 right-0 bg-black w-[350px] h-full animate-tranX_in grid gap-8 place-content-center text-white max-md:w-full">
+            <div className="fixed top-0 right-0 bg-black w-[350px] h-full animate-tranX_in grid gap-8 place-content-center text-white">
               <Drawer />
             </div>
           </>
@@ -58,7 +58,7 @@ const Header = () => {
                 setIsNavShowing(prev => !prev)
               }}
             />
-            <div className="fixed top-0 right-0 bg-black w-[350px] h-full animate-tranX_out grid gap-8 place-content-center text-white max-md:w-full">
+            <div className="fixed top-0 right-0 bg-black w-[350px] h-full animate-tranX_out grid gap-8 place-content-center text-white">
               <Drawer />
             </div>
           </>

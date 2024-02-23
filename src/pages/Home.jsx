@@ -36,12 +36,12 @@ const Home = () => {
                 >
                     <source src={BgVideo} type="video/mp4" />
                 </video>
-                <h1 className="text-[10em] font-bold text-white mt-10 z-10 max-sm:text-7xl">Catapult</h1>
+                <h1 className="text-[10em] font-bold text-white mt-10 z-10">Catapult</h1>
                 <h2 className="text-xl font-semibold text-white mb-5 z-10">Featured Projects</h2>
                 <HiArrowLongDown className="text-white text-4xl z-10 animate-bouncing" />
             </div>
 
-            <div className="relative flex w-full h-screen" id="bg_stuff">
+            <div className="relative flex w-full h-screen max-lg:flex-col" id="bg_stuff">
                 <div
                     className="absolute top-0 left-0 w-full h-full overflow-hidden"
                 >
@@ -56,7 +56,7 @@ const Home = () => {
                 />
             </div>
 
-            <div className="relative flex w-full h-screen" id="bg_tec">
+            <div className="relative flex w-full h-screen max-lg:flex-col-reverse" id="bg_tec">
                 <div
                     className="absolute top-0 left-0 w-full h-full overflow-hidden"
                 >
@@ -71,7 +71,7 @@ const Home = () => {
                 />
             </div>
 
-            <div className="relative flex w-full h-screen" id="bg_figura">
+            <div className="relative flex w-full h-screen max-lg:flex-col" id="bg_figura">
                 <div
                     className="absolute top-0 left-0 w-full h-full overflow-hidden"
                 >
@@ -95,7 +95,7 @@ const Home = () => {
                 />
             </div>
 
-            <div className="relative flex w-full h-screen" id="bg_moon">
+            <div className="relative flex w-full h-screen max-lg:flex-col-reverse" id="bg_moon">
                 <div
                     className="absolute top-0 left-0 w-full h-full overflow-hidden"
                 >
@@ -110,7 +110,7 @@ const Home = () => {
                 />
             </div>
 
-            <div className="relative flex w-full h-screen" id="bg_arches">
+            <div className="relative flex w-full h-screen max-lg:flex-col" id="bg_arches">
                 <div
                     className="absolute top-0 left-0 w-full h-full overflow-hidden"
                 >

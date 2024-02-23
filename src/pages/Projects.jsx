@@ -18,9 +18,9 @@ const Projects = () => {
         {
           prjData.map(({ id, path, name, img }) => {
             return (
-              <div className="relative w-full h-[600px] z-10 hover:opacity-75 duration-300" id="prj">
+              <div className="relative w-full h-[600px] z-10 hover:opacity-75 duration-300 max-lg:h-[400px]" id="prj">
                 <Link key={id} to={path}>
-                  <img src={img} alt="prj_image" className="absolute w-full h-full object-fill -z-10" />
+                  <img src={img} alt="prj_image" className="absolute w-full h-full object-fill -z-10 max-lg:h-auto" />
                   <button
                     className="text-6xl w-full h-full font-semibold text-white text-center"
                   >

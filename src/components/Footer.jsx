@@ -10,8 +10,8 @@ const Footer = () => {
   const [isShow, setIsShow] = useState(false);
 
   return (
-    <div className={`w-full h-auto bg-black p-[4%] text-white flex justify-between items-center ${isShow ? 'h-[70%]' : ''}`}>
-      <div className="w-auto h-full grid gap-5">
+    <div className={`w-full h-auto bg-black p-[4%] text-white grid grid-cols-3 place-items-center max-lg:grid-cols-1 max-lg:gap-10 ${isShow ? 'h-[70%]' : ''}`}>
+      <div className={`w-auto h-full flex flex-col justify-center gap-5 max-lg:text-center ${isShow ? 'justify-between' : ''}`}>
         <Link
           to='/'
           className="text-4xl font-bold"
@@ -24,7 +24,7 @@ const Footer = () => {
           <p>Yangon, Dawbon</p>
         </div>
       </div>
-      <div className="w-auto h-full grid gap-3">
+      <div className="w-auto h-full grid gap-3 max-sm:text-center">
         <div className="grid gap-3 text-lg">
           <Link to='/'>Home</Link>
           <div>
@@ -64,7 +64,7 @@ const Footer = () => {
         </div>
         <Link to='/privacy'>Privacy Policy</Link>
       </div>
-      <div className="w-auto h-full grid gap-5 place-items-end">
+      <div className={`w-auto h-full flex flex-col justify-center max-lg:items-center gap-5 items-end ${isShow ? 'justify-between' : ''}`}>
         <Link to='/'>
           <img src={Insta} alt="instagram" />
         </Link>

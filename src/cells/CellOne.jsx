@@ -27,7 +27,7 @@ const CellOne = ({ title, first, second, link }) => {
                 data-aos="fade-right"
                 data-aos-duration="2000"
                 data-aos-offset="300"
-                className="w-[50%] p-[10%] h-full grid gap-10 place-content-center z-10"
+                className="w-[50%] p-[10%] h-full grid gap-10 place-content-center z-10 lg_content"
             >
                 <h1 className="text-6xl text-white font-bold">{title}</h1>
                 <h2 className="text-xl text-white">Share information on a previous project here to attract new clients. Provide a brief summary to help visitors understand the context and background of the work.</h2>
@@ -35,17 +35,17 @@ const CellOne = ({ title, first, second, link }) => {
                     <FaArrowRightLong className="text-white text-2xl" />
                 </Link>
             </div>
-            <div className="relative p-[5%] w-[50%] h-full z-10">
+            <div className="relative p-[5%] w-[50%] h-full z-10 max-lg:w-full">
                 <img
                     src={first}
                     alt="photo"
-                    className="absolute left-20 bottom-32"
+                    className="absolute left-12 bottom-32 w-60 h-auto cell_one"
                     ref={tranSlow.ref}
                 />
                 <img
                     src={second}
                     alt="photo"
-                    className="absolute right-24 max-lg:hidden"
+                    className="absolute right-12 w-60 h-auto cell_two"
                     ref={tranFast.ref}
                 />
             </div>

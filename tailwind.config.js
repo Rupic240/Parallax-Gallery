@@ -37,7 +37,7 @@ export default {
         },
         'tranX_out': {
           from: { transform: 'translateX(0)'},
-          to: { transform: 'translateX(500px)'}
+          to: { transform: 'translateX(1000px)'}
         },
       },
       animation: {

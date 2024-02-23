@@ -12,7 +12,7 @@ const Info = () => {
           className='absolute w-full h-full object-cover -z-10'
         />
       </div>
-      <div className='w-[50%] h-screen bg-neutral-800 grid place-item-center py-[10%] px-[5%] gap-10 overflow-y-auto' style={{ scrollbarWidth: 'none' }} >
+      <div className='w-[50%] h-screen bg-neutral-800 grid place-item-center py-[10%] px-[5%] gap-10 overflow-y-auto max-lg:w-full' style={{ scrollbarWidth: 'none' }} >
         <div className='grid gap-5 mr-[10%]'>
           <h1 className='text-8xl'>Info</h1>
           <h2 className='text-3xl'>Catapult is a design & motion studio based in San Francisco.</h2>
