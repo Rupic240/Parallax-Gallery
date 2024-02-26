@@ -47,7 +47,7 @@ const Header = () => {
               }}
             />
             <div className="fixed top-0 right-0 bg-black w-[350px] h-full animate-tranX_in grid gap-8 place-content-center text-white max-sm:w-full">
-              <Drawer />
+              <Drawer setIsNavShowing={setIsNavShowing} />
             </div>
           </>
         ) : (

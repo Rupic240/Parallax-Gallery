@@ -3,7 +3,7 @@ import CardTwo from "../cards/CardTwo";
 
 import { Link } from "react-router-dom";
 import { mashupData } from "../data";
-import CardSwiper from "../cards/CardSwiper";
+import CardSwiper from "../components/CardSwiper";
 
 const Mashup = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
     return (

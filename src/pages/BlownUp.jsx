@@ -2,7 +2,7 @@ import CardOne from "../cards/CardOne";
 import CardTwo from "../cards/CardTwo";
 
 import { Link } from "react-router-dom";
-import CardSwiper from "../cards/CardSwiper";
+import CardSwiper from "../components/CardSwiper";
 import { blownUpData } from "../data";
 
 const BlownUp = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {

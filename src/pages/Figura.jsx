@@ -3,7 +3,7 @@ import CardTwo from "../cards/CardTwo";
 
 import { Link } from "react-router-dom";
 import { figuraData } from "../data";
-import CardSwiper from "../cards/CardSwiper";
+import CardSwiper from "../components/CardSwiper";
 
 const Figura = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
   return (
@@ -31,7 +31,7 @@ const Figura = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
                   {
                     vd && (
                       <video
-                        // autoPlay
+                        autoPlay
                         muted
                         loop
                         className="w-full h-auto object-cover max-sm:w-full max-sm:h-60"

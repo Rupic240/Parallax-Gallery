@@ -1,17 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { dropDownPaths } from "../data";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-const Drawer = () => {
+const Drawer = ({ setIsNavShowing }) => {
 
     const [isShow, setIsShow] = useState(false);
 
+    const hideDrawer = () => {
+        setIsNavShowing(false);
+    }
+
     return (
         <>
-            <Link to='/' className="text-5xl font-bold">Home</Link>
+            <Link to='/' className="text-5xl font-bold" onClick={hideDrawer}>Home</Link>
             <div>
-                <Link to='/projects' className="text-4xl font-bold">
+                <Link to='/projects' className="text-4xl font-bold" onClick={hideDrawer}>
                     All Projects
                 </Link>
                 <button onClick={() => setIsShow(prev => !prev)}>
@@ -33,6 +37,7 @@ const Drawer = () => {
                                             key={index}
                                             to={path}
                                             className="pl-5"
+                                            onClick={hideDrawer}
                                         >
                                             {name}
                                         </Link>
@@ -43,7 +48,7 @@ const Drawer = () => {
                     )
                 }
             </div>
-            <Link to='/info' className="text-5xl font-bold">info</Link>
+            <Link to='/info' className="text-5xl font-bold" onClick={hideDrawer}>info</Link>
         </>
     )
 }

@@ -47,7 +47,7 @@ const CardSwiper = ({ data, setShowSwiper, selectedImageID }) => {
                                 {
                                     item.vd && (
                                         <video
-                                            // autoPlay
+                                            autoPlay
                                             muted
                                             loop
                                             className="w-auto h-auto"

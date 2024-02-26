@@ -1,6 +1,6 @@
 import CardOne from "../cards/CardOne";
-import CardSwiper from "../cards/CardSwiper";
 import CardTwo from "../cards/CardTwo";
+import CardSwiper from "../components/CardSwiper";
 
 import { Link } from "react-router-dom";
 import { tectonicData } from "../data";

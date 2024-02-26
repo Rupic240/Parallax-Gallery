@@ -2,7 +2,7 @@ import CardOne from "../cards/CardOne";
 import CardTwo from "../cards/CardTwo";
 
 import { Link } from "react-router-dom";
-import CardSwiper from "../cards/CardSwiper";
+import CardSwiper from "../components/CardSwiper";
 import { facadeData } from "../data";
 
 const Facade = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {

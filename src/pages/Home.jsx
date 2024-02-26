@@ -29,7 +29,7 @@ const Home = () => {
         <div className="w-full h-auto overflow-hidden">
             <div className="relative w-full h-screen flex flex-col justify-center gap-5 items-center" id="home">
                 <video
-                    // autoPlay
+                    autoPlay
                     muted
                     loop
                     className="absolute w-full h-screen object-cover"
@@ -76,7 +76,7 @@ const Home = () => {
                     className="absolute top-0 left-0 w-full h-full overflow-hidden"
                 >
                     <video
-                        // autoPlay
+                        autoPlay
                         muted
                         loop
                         className="w-full h-full object-cover"
