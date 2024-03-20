@@ -34,7 +34,7 @@ const Figura = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
                         autoPlay
                         muted
                         loop
-                        className="w-full h-auto object-cover max-sm:w-full max-sm:h-60"
+                        className="w-full h-auto object-cover cursor-pointer max-sm:w-full max-sm:h-60"
                         onClick={() => handleClick(id)}
                       >
                         <source src={vd} type="video/mp4" />
