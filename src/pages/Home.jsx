@@ -41,7 +41,7 @@ const Home = () => {
                 <HiArrowLongDown className="text-white text-4xl z-10 animate-bouncing" />
             </div>
 
-            <div className="relative flex w-full h-screen max-lg:flex-col" id="bg_stuff">
+            <div className="relative flex w-full h-screen max-lg:flex-col max-sm:overflow-hidden" id="bg_stuff">
                 <div
                     className="absolute top-0 left-0 w-full h-full overflow-hidden"
                 >
@@ -71,7 +71,7 @@ const Home = () => {
                 />
             </div>
 
-            <div className="relative flex w-full h-screen max-lg:flex-col" id="bg_figura">
+            <div className="relative flex w-full h-screen max-lg:flex-col max-sm:overflow-hidden" id="bg_figura">
                 <div
                     className="absolute top-0 left-0 w-full h-full overflow-hidden"
                 >
