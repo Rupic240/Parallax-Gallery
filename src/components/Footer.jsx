@@ -24,7 +24,7 @@ const Footer = () => {
           Catapult
         </Link>
         <div className="text-lg">
-          <p>Mail: swanhtetpaing240@gamil.com</p>
+          <p>Mail: swanhtetpaing240@gmail.com</p>
           <p>Tel: (+95) 9968 421 586</p>
           <p>Yangon, Dawbon</p>
         </div>

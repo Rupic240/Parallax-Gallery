@@ -34,7 +34,7 @@
 }
 
 #bg_one {
-  background-image: url(./images/mashup.png);
+  background-image: url(/images/mashup.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,7 +43,7 @@
 }
 
 #bg_two {
-  background-image: url(./images/tectonic.png);
+  background-image: url(/images/tectonic.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -52,7 +52,7 @@
 }
 
 #bg_three {
-  background-image: url(./images/moon.png);
+  background-image: url(/images/moon.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -61,7 +61,7 @@
 }
 
 #bg_four {
-  background-image: url(./images/arches.png);
+  background-image: url(/images/arches.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

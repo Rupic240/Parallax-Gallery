@@ -4,6 +4,8 @@ import CardSwiper from "../components/CardSwiper";
 
 import { Link } from "react-router-dom";
 import data from "../data.json";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Tectonic = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
   return (
@@ -17,11 +19,13 @@ const Tectonic = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) =
           {
             data.tectonicData.filter(item => item.category === "tOne").map(({ id, img }) => {
               return (
-                <img
+                <LazyLoadImage
                   key={id}
                   src={img}
                   alt="image"
                   className="w-full h-auto object-cover cursor-pointer hover:opacity-80 duration-300 max-sm:w-full max-sm:h-60"
+                  delayTime={300}
+                  effect="blur"
                   onClick={() => handleClick(id)}
                 />
               )
@@ -32,11 +36,13 @@ const Tectonic = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) =
           {
             data.tectonicData.filter(item => item.category === "tTwo").map(({ id, img }) => {
               return (
-                <img
+                <LazyLoadImage
                   key={id}
                   src={img}
                   alt="image"
                   className="w-full h-auto object-cover cursor-pointer hover:opacity-80 duration-300 max-sm:w-full max-sm:h-60"
+                  delayTime={300}
+                  effect="blur"
                   onClick={() => handleClick(id)}
                 />
               )
