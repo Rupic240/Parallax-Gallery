@@ -1,11 +1,9 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
 import { useParallax } from "react-scroll-parallax";
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const CellTwo = ({ title, first, second, link }) => {
 
@@ -25,21 +23,17 @@ const CellTwo = ({ title, first, second, link }) => {
     return (
         <>
             <div className="relative p-[5%] w-[50%] h-full z-10 max-lg:w-full max-sm:w-[200px] max-sm:m-auto">
-                <LazyLoadImage
+                <img
                     src={first}
                     alt="photo"
                     ref={tranFast.ref}
-                    effect="blur"
-                    delayTime={300}
                     className="absolute left-12 w-60 h-auto cell_one"
                 />
-                <LazyLoadImage
+                <img
                     src={second}
                     alt="photo"
                     className='absolute right-12 bottom-32 w-60 h-auto cell_two'
                     ref={tranSlow.ref}
-                    effect="blur"
-                    delayTime={300}
                 />
             </div>
             <div
