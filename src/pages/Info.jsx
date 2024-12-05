@@ -11,7 +11,6 @@ const Info = () => {
         <LazyLoadImage
           src={InfoBG}
           alt="info_background"
-          effect='blur'
           delayTime={300}
           className='absolute w-full h-full object-cover -z-10'
         />
@@ -30,7 +29,7 @@ const Info = () => {
               data.myTeam.map(({ img, name, pos }, index) => {
                 return (
                   <div key={index} className='grid gap-3' >
-                    <LazyLoadImage src={img} alt={name} effect='blur' delayTime={300} className='w-[160px] h-[190px] object-cover sm_img' />
+                    <img src={img} alt={name} className='w-[160px] h-[190px] object-cover sm_img' />
                     <div>
                       <h3 className='text-lg font-semibold max-sm:text-5xl'>{name}</h3>
                       <p className='text-sm mt-5 max-sm:text-xl'>{pos}</p>
