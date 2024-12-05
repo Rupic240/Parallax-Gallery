@@ -1,14 +1,15 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { dropDownPaths } from "../data";
+import data from "../data.json";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { useUIState } from "../providers/UIStateProvider";
 
-const Drawer = ({ setIsNavShowing }) => {
+const Drawer = () => {
 
-    const [isShow, setIsShow] = useState(false);
+    const { isShow, setIsShow, setIsNavShowing } = useUIState();
 
     const hideDrawer = () => {
         setIsNavShowing(false);
+        setIsShow(false);
     }
 
     return (
@@ -31,7 +32,7 @@ const Drawer = ({ setIsNavShowing }) => {
                     isShow && (
                         <ul className="w-full h-auto grid gap-2 my-3 text-xl font-semibold">
                             {
-                                dropDownPaths.map(({ path, name }, index) => {
+                                data.dropDownPaths.map(({ path, name }, index) => {
                                     return (
                                         <Link
                                             key={index}

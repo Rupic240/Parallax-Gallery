@@ -2,7 +2,7 @@ import CardOne from "../cards/CardOne";
 import CardTwo from "../cards/CardTwo";
 
 import { Link } from "react-router-dom";
-import { archesData } from "../data";
+import data from "../data.json";
 import CardSwiper from "../components/CardSwiper";
 
 const Arches = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
@@ -15,7 +15,7 @@ const Arches = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
           year={2035}
         >
           {
-            archesData.filter(item => item.category === 'arOne').map(({ id, img }) => {
+            data.archesData.filter(item => item.category === 'arOne').map(({ id, img }) => {
               return (
                 <img
                   key={id}
@@ -30,7 +30,7 @@ const Arches = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
         </CardOne>
         <CardTwo>
           {
-            archesData.filter(item => item.category === 'arTwo').map(({ id, img }) => {
+            data.archesData.filter(item => item.category === 'arTwo').map(({ id, img }) => {
               return (
                 <img
                   key={id}
@@ -53,7 +53,7 @@ const Arches = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
       {
         showSwiper ? (
           <CardSwiper
-            data={archesData}
+            data={data.archesData}
             setShowSwiper={setShowSwiper}
             selectedImageID={selectedImageID}
           />

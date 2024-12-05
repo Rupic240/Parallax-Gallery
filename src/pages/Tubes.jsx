@@ -2,7 +2,7 @@ import CardOne from "../cards/CardOne";
 import CardTwo from "../cards/CardTwo";
 
 import { Link } from "react-router-dom";
-import { tubesData } from "../data";
+import data from "../data.json";
 import CardSwiper from "../components/CardSwiper";
 
 const Tubes = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
@@ -15,7 +15,7 @@ const Tubes = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
           year={2030}
         >
           {
-            tubesData.filter(item => item.category === 'tubeOne').map(({ id, img }) => {
+            data.tubesData.filter(item => item.category === 'tubeOne').map(({ id, img }) => {
               return (
                 <img
                   key={id}
@@ -30,7 +30,7 @@ const Tubes = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
         </CardOne>
         <CardTwo>
           {
-            tubesData.filter(item => item.category === 'tubeTwo').map(({ id, img }) => {
+            data.tubesData.filter(item => item.category === 'tubeTwo').map(({ id, img }) => {
               return (
                 <img
                   key={id}
@@ -61,7 +61,7 @@ const Tubes = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
       {
         showSwiper ? (
           <CardSwiper
-            data={tubesData}
+            data={data.tubesData}
             setShowSwiper={setShowSwiper}
             selectedImageID={selectedImageID}
           />

@@ -3,7 +3,7 @@ import CardTwo from "../cards/CardTwo";
 
 import { Link } from "react-router-dom";
 import CardSwiper from "../components/CardSwiper";
-import { facadeData } from "../data";
+import data from "../data.json";
 
 const Facade = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
 
@@ -16,7 +16,7 @@ const Facade = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
           year={2023}
         >
           {
-            facadeData.filter(item => item.category === 'facOne').map(({ id, img }) => {
+            data.facadeData.filter(item => item.category === 'facOne').map(({ id, img }) => {
               return (
                 <img
                   key={id}
@@ -31,7 +31,7 @@ const Facade = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
         </CardOne>
         <CardTwo>
           {
-            facadeData.filter(item => item.category === 'facTwo').map(({ id, img }) => {
+            data.facadeData.filter(item => item.category === 'facTwo').map(({ id, img }) => {
               return (
                 <img
                   key={id}
@@ -62,7 +62,7 @@ const Facade = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
       {
         showSwiper ? (
           <CardSwiper
-            data={facadeData}
+            data={data.facadeData}
             setShowSwiper={setShowSwiper}
             selectedImageID={selectedImageID}
           />

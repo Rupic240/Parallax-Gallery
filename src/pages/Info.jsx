@@ -1,5 +1,5 @@
-import { myTeam, seletedTeam } from '../data';
-import InfoBG from '../images/info.png';
+import data from '../data.json';
+import InfoBG from '/images/info.png';
 import { HiArrowLongDown } from "react-icons/hi2";
 
 const Info = () => {
@@ -23,7 +23,7 @@ const Info = () => {
           <h2 className='text-4xl mb-5'>The Team</h2>
           <div className='flex justify-between max-sm:grid max-sm:grid-cols-1 max-sm:gap-10'>
             {
-              myTeam.map(({ img, name, pos }, index) => {
+              data.myTeam.map(({ img, name, pos }, index) => {
                 return (
                   <div key={index} className='grid gap-3' >
                     <img src={img} alt={name} className='w-[160px] h-[190px] object-cover sm_img' />
@@ -40,7 +40,7 @@ const Info = () => {
             <h1 className='text-5xl mb-10'>Selected Clients</h1>
             <div className='w-full h-auto grid grid-cols-3 gap-3 max-sm:grid-cols-1 max-sm:gap-10'>
               {
-                seletedTeam.map(({ id, name }) => {
+                data.seletedTeam.map(({ id, name }) => {
                   return (
                     <h1
                       key={id}

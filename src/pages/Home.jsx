@@ -1,17 +1,17 @@
 import { HiArrowLongDown } from "react-icons/hi2";
-import BgVideo from "../images/bg_video.mp4";
-import Figura from "../images/figura.mp4";
+import BgVideo from "/images/bg_video.mp4";
+import Figura from "/images/figura.mp4";
 
-import Bag from "../images/bag.png";
-import Lamp from "../images/lamp.png";
-import TecOne from "../images/tec_one.png";
-import TecTwo from "../images/tec_two.png";
-import FigOne from "../images/figura_one.png";
-import FigTwo from "../images/figura_two.png";
-import MoonOne from "../images/moon_one.png";
-import MoonTwo from "../images/moon_two.png";
-import ArchesOne from "../images/arches_one.png";
-import ArchesTwo from "../images/arches_two.png";
+import Bag from "/images/bag.png";
+import Lamp from "/images/lamp.png";
+import TecOne from "/images/tec_one.png";
+import TecTwo from "/images/tec_two.png";
+import FigOne from "/images/figura_one.png";
+import FigTwo from "/images/figura_two.png";
+import MoonOne from "/images/moon_one.png";
+import MoonTwo from "/images/moon_two.png";
+import ArchesOne from "/images/arches_one.png";
+import ArchesTwo from "/images/arches_two.png";
 
 import CardOne from "../cells/CellOne";
 import CardTwo from "../cells/CellTwo";

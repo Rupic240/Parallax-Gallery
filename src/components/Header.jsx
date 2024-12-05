@@ -3,16 +3,17 @@ import { IoMdMenu } from "react-icons/io";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Drawer from "./Drawer";
+import { useUIState } from "../providers/UIStateProvider";
 
 const Header = () => {
 
   const [visible, setVisible] = useState(true);
-  const [isNavShowing, setIsNavShowing] = useState(false);
+  const { isNavShowing, setIsNavShowing } = useUIState();
 
   useEffect(() => {
     const handleScroll = () => {
       const scroll = window.scrollY;
-      if (scroll >= 250) {
+      if (scroll >= 200) {
         setVisible(false);
         setIsNavShowing(false);
       } else {
@@ -34,6 +35,9 @@ const Header = () => {
       <Link
         to='/'
         className="text-3xl font-bold text-white"
+        onClick={() => {
+          setIsNavShowing(false);
+        }}
       >
         Catapult
       </Link>
@@ -47,7 +51,7 @@ const Header = () => {
               }}
             />
             <div className="fixed top-0 right-0 bg-black w-[350px] h-full animate-tranX_in grid gap-8 place-content-center text-white max-sm:w-full">
-              <Drawer setIsNavShowing={setIsNavShowing} />
+              <Drawer />
             </div>
           </>
         ) : (

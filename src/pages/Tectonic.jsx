@@ -3,7 +3,7 @@ import CardTwo from "../cards/CardTwo";
 import CardSwiper from "../components/CardSwiper";
 
 import { Link } from "react-router-dom";
-import { tectonicData } from "../data";
+import data from "../data.json";
 
 const Tectonic = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
   return (
@@ -15,7 +15,7 @@ const Tectonic = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) =
           year={2027}
         >
           {
-            tectonicData.filter(item => item.category === "tOne").map(({ id, img }) => {
+            data.tectonicData.filter(item => item.category === "tOne").map(({ id, img }) => {
               return (
                 <img
                   key={id}
@@ -30,7 +30,7 @@ const Tectonic = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) =
         </CardOne>
         <CardTwo>
           {
-            tectonicData.filter(item => item.category === "tTwo").map(({ id, img }) => {
+            data.tectonicData.filter(item => item.category === "tTwo").map(({ id, img }) => {
               return (
                 <img
                   key={id}
@@ -61,7 +61,7 @@ const Tectonic = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) =
       {
         showSwiper ? (
           <CardSwiper
-            data={tectonicData}
+            data={data.tectonicData}
             setShowSwiper={setShowSwiper}
             selectedImageID={selectedImageID}
           />

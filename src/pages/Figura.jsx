@@ -2,7 +2,7 @@ import CardOne from "../cards/CardOne";
 import CardTwo from "../cards/CardTwo";
 
 import { Link } from "react-router-dom";
-import { figuraData } from "../data";
+import data from "../data.json";
 import CardSwiper from "../components/CardSwiper";
 
 const Figura = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
@@ -15,7 +15,7 @@ const Figura = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
           year={2026}
         >
           {
-            figuraData.filter(item => item.category === "fOne").map(({ id, img, vd }) => {
+            data.figuraData.filter(item => item.category === "fOne").map(({ id, img, vd }) => {
               return (
                 <div key={id}>
                   {
@@ -48,7 +48,7 @@ const Figura = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
         </CardOne>
         <CardTwo>
           {
-            figuraData.filter(item => item.category === "fTwo").map(({ id, img }) => {
+            data.figuraData.filter(item => item.category === "fTwo").map(({ id, img }) => {
               return (
                 <img
                   key={id}
@@ -79,7 +79,7 @@ const Figura = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
       {
         showSwiper ? (
           <CardSwiper
-            data={figuraData}
+            data={data.figuraData}
             setShowSwiper={setShowSwiper}
             selectedImageID={selectedImageID}
           />

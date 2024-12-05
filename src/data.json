@@ -1,0 +1,110 @@
+{
+  "myTeam": [
+    {
+      "img": "/images/lessie_barron.png",
+      "name": "Lessie Barron",
+      "pos": "Creative Director"
+    },
+    {
+      "img": "/images/tanya_carr.png",
+      "name": "Tanya Carr",
+      "pos": "Design Director"
+    },
+    {
+      "img": "/images/rey_mills.png",
+      "name": "Rey Mills",
+      "pos": "Motion Artist"
+    }
+  ],
+  "seletedTeam": [
+    { "id": 1, "name": "Laybox" },
+    { "id": 2, "name": "ESQUI" },
+    { "id": 3, "name": "PopHop" },
+    { "id": 4, "name": "Laural" },
+    { "id": 5, "name": "Vuite" },
+    { "id": 6, "name": "Tunetone" }
+  ],
+  "privacyPolicy": [
+    {
+      "title": "A legal disclaimer",
+      "disc": "The explanations and information provided on this page are only general and high-level explanations and information on how to write your own document of a Privacy Policy..."
+    },
+    {
+      "title": "Privacy Policy - the basics",
+      "disc": "Having said that, a privacy policy is a statement that discloses some or all of the ways a website collects, uses, discloses, processes, and manages the data of its visitors and customers..."
+    },
+    {
+      "title": "Privacy Policy - the basics",
+      "disc": "Generally speaking, a Privacy Policy often addresses these types of issues: the types of information the website is collecting and the manner in which it collects the data..."
+    }
+  ],
+  "dropDownPaths": [
+    { "path": "/blown_up", "name": "Blown Up" },
+    { "path": "/mashup", "name": "Mashup" },
+    { "path": "/tectonic", "name": "Tectonic" },
+    { "path": "/figura", "name": "Figura" },
+    { "path": "/facade", "name": "Facade" },
+    { "path": "/tubes", "name": "Tubes" },
+    { "path": "/moon", "name": "Moon" },
+    { "path": "/arches", "name": "Arches" }
+  ],
+  "prjData": [
+    { "id": 1, "path": "/blown_up", "name": "Blown Up", "img": "/images/prj_one.png" },
+    { "id": 2, "path": "/mashup", "name": "Mashup", "img": "/images/prj_two.png" },
+    { "id": 3, "path": "/tectonic", "name": "Tectonic", "img": "/images/prj_three.png" },
+    { "id": 4, "path": "/figura", "name": "Figura", "img": "/images/prj_four.png" },
+    { "id": 5, "path": "/facade", "name": "Facade", "img": "/images/prj_five.png" },
+    { "id": 6, "path": "/tubes", "name": "Tubes", "img": "/images/prj_six.png" },
+    { "id": 7, "path": "/moon", "name": "Moon", "img": "/images/prj_seven.png" },
+    { "id": 8, "path": "/arches", "name": "Arches", "img": "/images/prj_eight.png" }
+  ],
+  "blownUpData": [
+    { "id": 1, "img": "/images/blown_up_one.png", "category": "bOne" },
+    { "id": 2, "img": "/images/blown_up_two.png", "category": "bOne" },
+    { "id": 3, "img": "/images/blown_up_three.png", "category": "bTwo" },
+    { "id": 4, "img": "/images/blown_up_four.png", "category": "bTwo" },
+    { "id": 5, "img": "/images/blown_up_five.png", "category": "bTwo" }
+  ],
+  "mashupData": [
+    { "id": 1, "img": "/images/prj_two.png", "category": "mOne" },
+    { "id": 2, "img": "/images/mashup_two.png", "category": "mOne" },
+    { "id": 3, "img": "/images/mashup_three.png", "category": "mTwo" },
+    { "id": 4, "img": "/images/mashup_four.png", "category": "mTwo" }
+  ],
+  "tectonicData": [
+    { "id": 1, "img": "/images/tectonic_one.png", "category": "tOne" },
+    { "id": 2, "img": "/images/tectonic_two.png", "category": "tOne" },
+    { "id": 3, "img": "/images/tectonic_three.png", "category": "tTwo" },
+    { "id": 4, "img": "/images/tectonic_four.png", "category": "tTwo" }
+  ],
+  "figuraData": [
+    { "id": 1, "img": "/images/fg_one.png", "category": "fOne" },
+    { "id": 2, "vd": "/images/figura.mp4", "category": "fOne" },
+    { "id": 3, "img": "/images/fg_three.png", "category": "fOne" },
+    { "id": 4, "img": "/images/fg_four.png", "category": "fTwo" },
+    { "id": 5, "img": "/images/fg_five.png", "category": "fTwo" }
+  ],
+  "facadeData": [
+    { "id": 1, "img": "/images/fac_one.png", "category": "facOne" },
+    { "id": 2, "img": "/images/fac_two.png", "category": "facOne" },
+    { "id": 3, "img": "/images/fac_three.png", "category": "facTwo" },
+    { "id": 4, "img": "/images/fac_four.png", "category": "facTwo" }
+  ],
+  "tubesData": [
+    { "id": 1, "img": "/images/tu_one.png", "category": "tubeOne" },
+    { "id": 2, "img": "/images/tu_two.png", "category": "tubeTwo" },
+    { "id": 3, "img": "/images/tu_three.png", "category": "tubeTwo" }
+  ],
+  "moonData": [
+    { "id": 1, "img": "/images/mo_one.png", "category": "moOne" },
+    { "id": 2, "img": "/images/mo_two.png", "category": "moOne" },
+    { "id": 3, "img": "/images/mo_three.png", "category": "moTwo" }
+  ],
+  "archesData": [
+    { "id": 1, "img": "/images/ar_one.png", "category": "arOne" },
+    { "id": 2, "img": "/images/ar_two.png", "category": "arOne" },
+    { "id": 3, "img": "/images/ar_three.png", "category": "arOne" },
+    { "id": 4, "img": "/images/ar_four.png", "category": "arTwo" },
+    { "id": 5, "img": "/images/ar_five.png", "category": "arTwo" }
+  ]
+}

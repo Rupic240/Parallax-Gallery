@@ -2,7 +2,7 @@ import CardOne from "../cards/CardOne";
 import CardTwo from "../cards/CardTwo";
 
 import { Link } from "react-router-dom";
-import { mashupData } from "../data";
+import data from "../data.json";
 import CardSwiper from "../components/CardSwiper";
 
 const Mashup = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
@@ -15,7 +15,7 @@ const Mashup = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
                     year={2025}
                 >
                     {
-                        mashupData.filter(item => item.category === "mOne").map(({ id, img }) => {
+                        data.mashupData.filter(item => item.category === "mOne").map(({ id, img }) => {
                             return (
                                 <img
                                     key={id}
@@ -30,7 +30,7 @@ const Mashup = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
                 </CardOne>
                 <CardTwo>
                     {
-                        mashupData.filter(item => item.category === "mTwo").map(({ id, img }) => {
+                        data.mashupData.filter(item => item.category === "mTwo").map(({ id, img }) => {
                             return (
                                 <img
                                     key={id}
@@ -61,7 +61,7 @@ const Mashup = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => 
             {
                 showSwiper ? (
                     <CardSwiper
-                        data={mashupData}
+                        data={data.mashupData}
                         setShowSwiper={setShowSwiper}
                         selectedImageID={selectedImageID}
                     />

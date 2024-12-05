@@ -2,7 +2,7 @@ import CardOne from "../cards/CardOne";
 import CardTwo from "../cards/CardTwo";
 
 import { Link } from "react-router-dom";
-import { moonData } from "../data";
+import data from "../data.json";
 import CardSwiper from "../components/CardSwiper";
 
 const Moon = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
@@ -15,7 +15,7 @@ const Moon = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
                     year={2032}
                 >
                     {
-                        moonData.filter(item => item.category === 'moOne').map(({ id, img }) => {
+                        data.moonData.filter(item => item.category === 'moOne').map(({ id, img }) => {
                             return (
                                 <img
                                     key={id}
@@ -30,7 +30,7 @@ const Moon = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
                 </CardOne>
                 <CardTwo>
                     {
-                        moonData.filter(item => item.category === 'moTwo').map(({ id, img }) => {
+                        data.moonData.filter(item => item.category === 'moTwo').map(({ id, img }) => {
                             return (
                                 <img
                                     key={id}
@@ -61,7 +61,7 @@ const Moon = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
             {
                 showSwiper ? (
                     <CardSwiper
-                        data={moonData}
+                        data={data.moonData}
                         setShowSwiper={setShowSwiper}
                         selectedImageID={selectedImageID}
                     />

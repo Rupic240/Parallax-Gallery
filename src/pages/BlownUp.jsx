@@ -3,7 +3,7 @@ import CardTwo from "../cards/CardTwo";
 
 import { Link } from "react-router-dom";
 import CardSwiper from "../components/CardSwiper";
-import { blownUpData } from "../data";
+import data from "../data.json";
 
 const BlownUp = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) => {
 
@@ -16,7 +16,7 @@ const BlownUp = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) =>
           year={2025}
         >
           {
-            blownUpData.filter(item => item.category === "bOne").map(({ id, img }) => {
+            data.blownUpData.filter(item => item.category === "bOne").map(({ id, img }) => {
               return (
                 <img
                   key={id}
@@ -31,7 +31,7 @@ const BlownUp = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) =>
         </CardOne>
         <CardTwo>
           {
-            blownUpData.filter(item => item.category === "bTwo").map(({ id, img }) => {
+            data.blownUpData.filter(item => item.category === "bTwo").map(({ id, img }) => {
               return (
                 <img
                   key={id}
@@ -56,7 +56,7 @@ const BlownUp = ({ showSwiper, setShowSwiper, selectedImageID, handleClick }) =>
       {
         showSwiper && (
           <CardSwiper
-            data={blownUpData}
+            data={data.blownUpData}
             setShowSwiper={setShowSwiper}
             selectedImageID={selectedImageID}
           />

@@ -1,17 +1,22 @@
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import { Link } from "react-router-dom";
-import Insta from "../assets/insta.svg";
-import { useState } from "react";
-import { dropDownPaths } from "../data";
+import data from "../data.json";
+import { FaGithub } from "react-icons/fa6";
+import { useUIState } from "../providers/UIStateProvider";
 
 const Footer = () => {
 
-  const [isShow, setIsShow] = useState(false);
+  const { isShowFooterDrop, setIsShowFooterDrop } = useUIState();
+
+  const hideFooterDropDown = () => {
+    setIsShowFooterDrop(false);
+    scrollTo(0);
+  }
 
   return (
-    <div className={`w-full h-auto bg-black p-[4%] text-white grid grid-cols-3 place-items-center max-lg:grid-cols-1 max-lg:gap-10 max-sm:place-items-start ${isShow ? 'h-[70%]' : ''}`}>
-      <div className={`w-auto h-full flex flex-col justify-center gap-5 ${isShow ? 'justify-between' : ''}`}>
+    <div className={`w-full h-auto bg-black p-[4%] text-white grid grid-cols-3 place-items-center max-lg:grid-cols-1 max-lg:gap-10 max-sm:place-items-start ${isShowFooterDrop ? 'h-[70%]' : ''}`}>
+      <div className={`w-auto h-full flex flex-col justify-center gap-5 ${isShowFooterDrop ? 'justify-between' : ''}`}>
         <Link
           to='/'
           className="text-4xl font-bold"
@@ -26,14 +31,14 @@ const Footer = () => {
       </div>
       <div className="w-auto h-full grid gap-3">
         <div className="grid gap-3 text-lg">
-          <Link to='/'>Home</Link>
+          <Link onClick={hideFooterDropDown} to='/'>Home</Link>
           <div>
-            <Link to='/projects' className="text-lg">
+            <Link onClick={hideFooterDropDown} to='/projects' className="text-lg">
               All Projects
             </Link>
-            <button onClick={() => setIsShow(prev => !prev)}>
+            <button onClick={() => setIsShowFooterDrop(prev => !prev)}>
               {
-                isShow ? (
+                isShowFooterDrop ? (
                   <IoIosArrowUp className="inline-block ml-5 cursor-pointer" />
                 ) : (
                   <IoIosArrowDown className="inline-block ml-5 cursor-pointer" />
@@ -41,12 +46,12 @@ const Footer = () => {
               }
             </button>
             {
-              isShow && (
+              isShowFooterDrop && (
                 <ul className="w-full h-auto grid gap-2 my-3">
                   {
-                    dropDownPaths.map(({ path, name }, index) => {
+                    data.dropDownPaths.map(({ path, name }, index) => {
                       return (
-                        <Link
+                        <Link onClick={hideFooterDropDown}
                           key={index}
                           to={path}
                           className="pl-5"
@@ -64,9 +69,9 @@ const Footer = () => {
         </div>
         <Link to='/privacy'>Privacy Policy</Link>
       </div>
-      <div className={`w-auto h-full flex flex-col justify-center max-sm:items-start gap-5 items-end ${isShow ? 'justify-between' : ''}`}>
-        <Link to='/'>
-          <img src={Insta} alt="instagram" />
+      <div className={`w-auto h-full flex flex-col justify-center max-sm:items-start gap-5 items-end ${isShowFooterDrop ? 'justify-between' : ''}`}>
+        <Link to="https://github.com/Rupic240">
+          <FaGithub className="text-2xl" />
         </Link>
         <p>© 2024 by Rupic. Made with <span className="underline cursor-pointer">Rupic Studio™</span></p>
       </div>
