@@ -1,14 +1,18 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import data from '../data.json';
 import InfoBG from '/images/info.png';
 import { HiArrowLongDown } from "react-icons/hi2";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Info = () => {
   return (
     <div className='w-full h-screen flex text-white max-sm:flex-col max-sm:h-auto'>
       <div className='relative w-[50%] h-full max-sm:hidden'>
-        <img
+        <LazyLoadImage
           src={InfoBG}
           alt="info_background"
+          effect='blur'
+          delayTime={300}
           className='absolute w-full h-full object-cover -z-10'
         />
       </div>
@@ -26,7 +30,7 @@ const Info = () => {
               data.myTeam.map(({ img, name, pos }, index) => {
                 return (
                   <div key={index} className='grid gap-3' >
-                    <img src={img} alt={name} className='w-[160px] h-[190px] object-cover sm_img' />
+                    <LazyLoadImage src={img} alt={name} effect='blur' delayTime={300} className='w-[160px] h-[190px] object-cover sm_img' />
                     <div>
                       <h3 className='text-lg font-semibold max-sm:text-5xl'>{name}</h3>
                       <p className='text-sm mt-5 max-sm:text-xl'>{pos}</p>
